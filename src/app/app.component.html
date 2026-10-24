@@ -1,0 +1,246 @@
+<a class="skip-link" href="#conteudo">Saltar para o conteúdo</a>
+<header class="site-header">
+  <a class="brand" href="#inicio" aria-label="Cruza Sabedorias — página inicial" (click)="closeMenu()">
+    <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+    <span class="brand-type"><strong>cruza<span>sabedorias</span></strong><small>CONTABILIDADE &amp; CONSULTORIA</small></span>
+  </a>
+  <nav class="main-nav" id="menu-principal" aria-label="Navegação principal" [class.menu-open]="menuOpen()">
+    <a href="#sobre" (click)="closeMenu()">Quem somos</a>
+    <a href="#servicos" (click)="closeMenu()">Serviços</a>
+    <a href="#para-quem" (click)="closeMenu()">Para quem</a>
+    <a href="#equipa" (click)="closeMenu()">Equipa</a>
+    <a href="#metodo" (click)="closeMenu()">A nossa abordagem</a>
+    <a class="mobile-contact" href="#contacto" (click)="closeMenu()">Falar connosco <span aria-hidden="true">↗</span></a>
+  </nav>
+  <a class="header-cta" href="#contacto">Pedir contacto <span aria-hidden="true">↗</span></a>
+  <button class="menu-button" type="button" (click)="menuOpen.set(!menuOpen())" [attr.aria-expanded]="menuOpen()" aria-controls="menu-principal" [attr.aria-label]="menuOpen() ? 'Fechar menu' : 'Abrir menu'">
+    <span></span><span></span>
+  </button>
+</header>
+
+<a class="mobile-quick-contact" href="#contacto" aria-label="Pedir contacto à Cruza Sabedorias"><span>Falar com a equipa</span><span aria-hidden="true">↗</span></a>
+
+<main id="conteudo">
+  <section class="hero" id="inicio" aria-labelledby="hero-title">
+    <div class="hero-editorial">
+      <div class="hero-eyebrow"><i></i> O CONHECIMENTO FAZ A DIFERENÇA <span>— 01 / 07</span></div>
+      <div class="hero-main-copy">
+        <h1 id="hero-title">Os números<br>contam.<br><em>Nós damos-lhes</em><br>direção<span class="title-period">.</span></h1>
+        <p>Contabilidade, fiscalidade e gestão financeira com uma visão mais clara do que realmente importa: as pessoas e as decisões por trás de cada negócio.</p>
+        <div class="hero-buttons">
+          <a href="#servicos" class="button button-dark"><span>Explorar serviços</span><span class="button-arrow" aria-hidden="true">↗</span></a>
+          <a href="#contacto" class="link-underline">Vamos conversar <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="hero-proof-grid" aria-label="Destaques da Cruza Sabedorias">
+          <div class="hero-proof-card"><strong>6</strong><span>serviços principais</span></div>
+          <div class="hero-proof-card"><strong>3</strong><span>perfis de acompanhamento</span></div>
+          <div class="hero-proof-card"><strong>OCC</strong><span>apoio articulado e profissional</span></div>
+        </div>
+      </div>
+      <div class="hero-caption"><span>CONHECIMENTO PARA DECIDIR</span><span>CONTABILIDADE QUE ACOMPANHA</span><span>PORTUGAL · 2026</span></div>
+    </div>
+    <div class="hero-visual" aria-label="Representação conceptual de análise e informação financeira">
+      <div class="visual-top"><span class="visual-symbol">✳</span><span>CS / FINANCIAL PERSPECTIVE</span><span>↗</span></div>
+      <div class="visual-orbit orbit-one" aria-hidden="true"></div>
+      <div class="visual-orbit orbit-two" aria-hidden="true"></div>
+      <div class="visual-orbit orbit-three" aria-hidden="true"></div>
+      <div class="visual-mid" aria-hidden="true"><span>ENTENDER</span><span>ORGANIZAR</span><span>EVOLUIR</span></div>
+      <div class="visual-chart" aria-hidden="true">
+        <svg viewBox="0 0 600 330" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+          <g stroke="#cfd6de" stroke-opacity=".22" stroke-width="1"><path d="M0 62H600M0 126H600M0 190H600M0 254H600"/><path d="M75 0V330M185 0V330M295 0V330M405 0V330M515 0V330"/></g>
+          <path d="M-15 300C54 278 96 275 151 237S252 263 305 187 383 211 440 130 529 135 613 48" stroke="#b1c96f" stroke-width="3.5" class="chart-stroke"/>
+          <path d="M-15 300C54 278 96 275 151 237S252 263 305 187 383 211 440 130 529 135 613 48V330H-15Z" fill="url(#heroChartFill)" opacity=".43"/>
+          <circle cx="440" cy="130" r="7" fill="#dce6b9" stroke="#0d2a56" stroke-width="4"/>
+          <circle cx="305" cy="187" r="6" fill="#dce6b9" stroke="#0d2a56" stroke-width="4"/>
+          <defs><linearGradient id="heroChartFill" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#b1c96f" stop-opacity=".54"/><stop offset="1" stop-color="#b1c96f" stop-opacity="0"/></linearGradient></defs>
+        </svg>
+        <span class="chart-watermark">CLAREZA<br>EM CADA<br>DECISÃO.</span>
+      </div>
+      <div class="visual-data-chip"><span class="chip-index">C / 01</span><strong>Perspetiva<br>em cada número.</strong><span class="chip-arrow" aria-hidden="true">↗</span></div>
+      <div class="visual-note"><span>ABORDAGEM</span><strong>Escuta, análise e acompanhamento.</strong><p>Uma estrutura pensada para transformar informação técnica em orientação prática.</p></div>
+      <div class="visual-bottom"><span>RIGOR / PROXIMIDADE / VISÃO</span><span>ILUSTRAÇÃO CONCEPTUAL</span></div>
+    </div>
+  </section>
+
+  <div class="ticker" aria-hidden="true"><div class="ticker-track">
+    @for (copy of [0,1]; track copy) {<div class="ticker-group">
+      @for (item of [0,1,2,3]; track item) {<span>CONTABILIDADE <i>✳</i> FISCALIDADE <i>✳</i> CONSULTORIA DE GESTÃO <i>✳</i></span>}
+    </div>}
+  </div></div>
+
+  <section class="intro section-pad" id="sobre" csReveal>
+    <div class="intro-left"><span class="section-kicker"><i></i> 01 — A CRUZA SABEDORIAS</span><span class="large-star" aria-hidden="true">✳</span></div>
+    <div class="intro-right">
+      <h2>Há muito mais<br>para descobrir <em>além<br>dos números.</em></h2>
+      <div class="intro-bottom"><p>Na <strong>Cruza Sabedorias</strong>, a contabilidade, a fiscalidade e a gestão financeira cruzam-se com uma ideia simples: ajudar a compreender melhor o presente para preparar decisões mais informadas.</p><div class="mini-line"><span>O QUE NOS MOVE</span><span>Rigor. Proximidade. Perspetiva.</span><ul class="intro-points"><li>Contabilidade e fiscalidade com leitura prática.</li><li>Apoio a empresas, independentes e particulares.</li><li>Relação próxima e acompanhamento contínuo.</li></ul></div></div>
+    </div>
+  </section>
+
+  <section class="services section-pad" id="servicos">
+    <div class="section-top" csReveal>
+      <div><span class="section-kicker"><i></i> 02 — OS NOSSOS SERVIÇOS</span><h2>Soluções certas.<br><em>Conversas claras.</em></h2></div>
+      <div class="section-side"><p>Um conjunto de serviços para dar estrutura ao dia a dia, responder às obrigações fiscais e apoiar a gestão do seu negócio.</p><div class="filters" aria-label="Filtrar serviços">
+        @for(option of filters; track option) {<button type="button" [class.active]="filter() === option" [attr.aria-pressed]="filter() === option" (click)="selectFilter(option)">{{option}}</button>}
+      </div></div>
+    </div>
+    <div class="service-list service-list-premium">
+      @for (service of visibleServices(); track service.id) {
+      <article class="service-card" csReveal>
+        <div class="service-card-top"><div class="service-card-meta"><span>{{service.number}} / CS</span><span class="service-category">{{service.category}}</span></div><span class="service-icon" aria-hidden="true">
+          @switch(service.icon) {
+            @case('book') { <svg viewBox="0 0 52 52"><path d="M8 13h15a7 7 0 0 1 7 7v21a7 7 0 0 0-7-7H8zM44 13H29a7 7 0 0 0-7 7v21a7 7 0 0 1 7-7h15z"/></svg> }
+            @case('receipt') { <svg viewBox="0 0 52 52"><path d="M13 7h26v38l-7-5-6 5-7-5-6 5zM19 18h14M19 25h14M19 32h8"/></svg> }
+            @case('users') { <svg viewBox="0 0 52 52"><circle cx="20" cy="19" r="7"/><path d="M7 44v-4a13 13 0 0 1 26 0v4zM34 13a7 7 0 0 1 0 14M37 32c5 1 8 5 8 11"/></svg> }
+            @case('building') { <svg viewBox="0 0 52 52"><path d="M11 45V14l15-7 15 7v31zM5 45h42M19 20h5M29 20h5M19 28h5M29 28h5M23 45V36h6v9"/></svg> }
+            @case('chart') { <svg viewBox="0 0 52 52"><path d="M7 45V9M7 45h39M14 35l10-10 7 5 14-18M36 12h9v9"/></svg> }
+            @case('report') { <svg viewBox="0 0 52 52"><path d="M12 7h21l8 8v30H12zM33 7v9h8M19 24v13M26 30v7M33 20v17"/></svg> }
+          }
+        </span></div>
+        <div class="service-card-body"><h3>{{service.name}}</h3><p>{{service.description}}</p><ul>@for(item of service.scope; track item) {<li>{{item}}</li>}</ul></div>
+        <div class="service-detail" [class.is-open]="expandedService() === service.id">
+          <button class="service-detail-toggle" type="button"
+            [attr.aria-expanded]="expandedService() === service.id"
+            [attr.aria-controls]="'service-detail-' + service.id"
+            (click)="toggleService(service.id)">
+            <span>Quando procurar este apoio?</span><span aria-hidden="true">{{expandedService() === service.id ? '−' : '+'}}</span>
+          </button>
+          <div class="service-detail-body" [id]="'service-detail-' + service.id" [attr.aria-hidden]="expandedService() !== service.id">
+            <div class="service-detail-inner"><p>{{service.whenToAsk}}</p></div>
+          </div>
+        </div>
+        <button class="service-action" type="button" (click)="requestService(service)"><span>Falar sobre este serviço</span><span class="action-circle" aria-hidden="true">↗</span></button>
+      </article>
+      }
+    </div>
+    <div class="services-footnote">01 — 06 / O âmbito e as condições dos serviços são definidos de acordo com cada situação.</div>
+  </section>
+
+  <section class="statement" csReveal>
+    <div class="statement-index"><span>03 — A NOSSA VISÃO</span><span>✳</span></div>
+    <h2>Mais do que cumprir<br>obrigações. <em>Compreender<br>possibilidades.</em></h2>
+    <div class="statement-bottom"><span>CRUZA SABEDORIAS</span><p>Quando a informação faz sentido, as decisões ganham outra dimensão.</p><span aria-hidden="true">↗</span></div>
+  </section>
+
+  <section class="profiles section-pad" id="para-quem">
+    <div class="section-top" csReveal><div><span class="section-kicker"><i></i> 04 — PARA QUEM TRABALHAMOS</span><h2>Histórias diferentes.<br><em>A mesma atenção.</em></h2></div><p class="section-side-copy">Cada atividade tem o seu ritmo, os seus desafios e as suas perguntas. Começamos pelo que faz sentido para si.</p></div>
+    <div class="profile-grid profile-grid-editorial">
+      @for(profile of profiles; track profile.number){
+      <article class="profile-card" csReveal>
+        <div class="profile-number"><span>{{profile.number}} / 03</span><span aria-hidden="true">✳</span></div>
+        <span class="profile-eyebrow">{{profile.eyebrow}}</span>
+        <h3>{{profile.title}}</h3>
+        <p>{{profile.description}}</p>
+        <button class="profile-link" type="button" (click)="requestService(profile.service)">Vamos falar <span aria-hidden="true">↗</span></button>
+      </article>
+      }
+    </div>
+  </section>
+
+  <section class="team section-pad" id="equipa" aria-labelledby="team-heading">
+    <div class="section-top" csReveal>
+      <div>
+        <span class="section-kicker"><i></i> 05 — AS PESSOAS POR TRÁS DOS NÚMEROS</span>
+        <h2 id="team-heading">Conhecimento técnico.<br><em>Relações humanas.</em></h2>
+      </div>
+      <p class="section-side-copy">Conheça as pessoas que asseguram o acompanhamento contabilístico e administrativo no dia a dia da Cruza Sabedorias.</p>
+    </div>
+    <div class="team-roster">
+      @for (member of teamMembers; track member.id; let idx = $index) {
+        <article class="team-person" [class.team-person-reverse]="idx % 2 === 1" csReveal>
+          <div class="team-person-art" aria-hidden="true">
+            <div class="team-person-art-top"><span>CS / EQUIPA</span><span>{{member.index}} / 02</span></div>
+            <span class="team-person-ring team-person-ring-outer"></span>
+            <span class="team-person-ring team-person-ring-inner"></span>
+            <span class="team-person-initials">{{member.initials}}</span>
+            <div class="team-person-art-bottom"><span>RIGOR &amp; PROXIMIDADE</span><span>↗</span></div>
+          </div>
+          <div class="team-person-info">
+            <span class="team-person-overline">{{member.index}} / A NOSSA EQUIPA</span>
+            <h3>{{member.name}}</h3>
+            <p class="team-person-role">{{member.role}}</p>
+            <div class="team-person-biography">
+              <p>{{member.description}}</p>
+              <p>{{member.story}}</p>
+            </div>
+            <a class="team-person-email" [href]="'mailto:' + member.email" [attr.aria-label]="'Enviar email a ' + member.name">
+              <span>{{member.email}}</span><span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </article>
+      }
+    </div>
+    <aside class="team-professional" csReveal aria-label="Contabilidade certificada">
+      <div class="team-professional-icon" aria-hidden="true">✳</div>
+      <div class="team-professional-copy">
+        <span class="team-mini-index">ARTICULAÇÃO PROFISSIONAL</span>
+        <h3>Contabilidade certificada.</h3>
+        <p>A Cruza Sabedorias trabalha em articulação com contabilista certificado inscrito na Ordem dos Contabilistas Certificados.</p>
+      </div>
+      <a class="team-professional-link" href="#contacto">Falar com a equipa <span aria-hidden="true">↗</span></a>
+    </aside>
+  </section>
+
+  <section class="method section-pad" id="metodo">
+    <div class="method-head" csReveal><span class="section-kicker light"><i></i> 06 — A NOSSA ABORDAGEM</span><h2>Trabalhamos com números.<br><em>Começamos pelas pessoas.</em></h2><p>Um processo simples, pensado para trocar complexidade por clareza.</p></div>
+    <div class="method-steps">
+      <div csReveal><span class="step-num">01</span><span class="step-mark" aria-hidden="true">↗</span><h3>Primeiro, ouvimos.</h3><p>Partilhe a sua atividade, contexto e principais necessidades.</p></div>
+      <div csReveal><span class="step-num">02</span><span class="step-mark" aria-hidden="true">✳</span><h3>Depois, analisamos.</h3><p>Identificamos o enquadramento e os serviços mais adequados à situação.</p></div>
+      <div csReveal><span class="step-num">03</span><span class="step-mark" aria-hidden="true">→</span><h3>Por fim, acompanhamos.</h3><p>Definimos em conjunto os próximos passos e as condições do apoio.</p></div>
+    </div>
+  </section>
+
+  <section class="questions section-pad" id="perguntas" csReveal>
+    <div class="questions-title"><span class="section-kicker"><i></i> 07 — PERGUNTAS FREQUENTES</span><h2>Boas perguntas.<br><em>Melhores caminhos.</em></h2><p>Começamos por esclarecer as dúvidas mais comuns.</p></div>
+    <div class="questions-list">
+      @for (faq of faqs; track faq.q; let idx = $index) {
+        <article class="faq-item" [class.is-open]="expandedFaq() === idx">
+          <h3 class="faq-heading">
+            <button type="button" class="faq-toggle" [id]="'faq-question-' + idx"
+              [attr.aria-expanded]="expandedFaq() === idx"
+              [attr.aria-controls]="'faq-answer-' + idx"
+              (click)="toggleFaq(idx)">
+              <span class="faq-number">0{{idx + 1}}</span>
+              <span class="faq-question">{{faq.q}}</span>
+              <span class="question-plus" aria-hidden="true">+</span>
+            </button>
+          </h3>
+          <div class="faq-answer" [id]="'faq-answer-' + idx" role="region"
+            [attr.aria-labelledby]="'faq-question-' + idx"
+            [attr.aria-hidden]="expandedFaq() !== idx">
+            <div class="faq-answer-inner"><p>{{faq.a}}</p></div>
+          </div>
+        </article>
+      }
+    </div>
+  </section>
+
+  <cs-contact [interest]="interest()" />
+
+  <section class="privacy-summary" id="privacidade" aria-labelledby="privacy-title">
+    <div class="privacy-summary-title"><span class="section-kicker"><i></i> INFORMAÇÃO DE PRIVACIDADE</span><h2 id="privacy-title">Os seus dados, com clareza.</h2></div>
+    <div class="privacy-summary-text">
+      <p>Ao preencher o formulário de contacto, partilha o nome, email, perfil, serviço pretendido, mensagem e, se desejar, telefone. Estes dados destinam-se à análise e resposta ao pedido e são recebidos através da plataforma Netlify Forms.</p>
+      <p>Para esclarecer questões sobre o tratamento dos dados ou apresentar pedidos relacionados com os seus dados pessoais, pode contactar a equipa através dos endereços profissionais disponibilizados nesta página.</p>
+      <p class="privacy-review-note">Esta informação é um resumo para o protótipo. Antes da publicação definitiva, devem ser confirmados a identificação legal do responsável pelo tratamento, os prazos de conservação, a base legal aplicável e a política de privacidade integral.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-main">
+    <div class="footer-brand-block"><a class="brand brand-light" href="#inicio" aria-label="Cruza Sabedorias — voltar ao início"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span><span class="brand-type"><strong>cruza<span>sabedorias</span></strong><small>CONTABILIDADE &amp; CONSULTORIA</small></span></a><p>Conhecimento que cruza números,<br>pessoas e decisões.</p></div>
+    <div class="footer-navigation"><span class="footer-heading">NAVEGAÇÃO</span><a href="#sobre">Quem somos</a><a href="#servicos">Serviços</a><a href="#para-quem">Para quem</a><a href="#equipa">Equipa</a><a href="#metodo">A nossa abordagem</a><a href="#contacto">Contacto</a><a href="#privacidade">Privacidade</a></div>
+    <div class="footer-contacts">
+      <span class="footer-heading">CONTACTOS DIRETOS</span>
+      <p>Prefere entrar em contacto diretamente com a equipa?</p>
+      @for (member of teamMembers; track member.id) {
+        <div class="footer-person-contact">
+          <span>{{member.name}}</span>
+          <a [href]="'mailto:' + member.email">{{member.email}} <span aria-hidden="true">↗</span></a>
+        </div>
+      }
+    </div>
+    <div class="footer-legal"><span class="footer-heading">INFORMAÇÃO PROFISSIONAL</span><strong>Contabilista Certificado</strong><span>{{legal.name}}</span><span>Inscrição OCC n.º {{legal.occNumber}}</span></div>
+  </div>
+  <div class="footer-bottom"><span>© {{year}} Cruza Sabedorias. Todos os direitos reservados.</span><a href="#inicio">VOLTAR AO INÍCIO ↑</a><span>RIGOR / CLAREZA / PROXIMIDADE</span></div>
+</footer>

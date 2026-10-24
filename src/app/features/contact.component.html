@@ -1,0 +1,52 @@
+<div class="contact-panel" id="contacto">
+  <div class="contact-copy">
+    <span class="section-kicker light"><i></i> 08 — VAMOS CONVERSAR</span>
+    <h2>Uma conversa pode<br><em>mudar a perspetiva.</em></h2>
+    <p>Conte-nos em que fase está. Seja uma questão fiscal, o início de um negócio ou a procura de acompanhamento financeiro, começamos por ouvir.</p>
+    <div class="contact-aside">
+      <span class="aside-icon" aria-hidden="true">↗</span>
+      <span>Sem formulários intermináveis.<br>O primeiro passo é simples.</span>
+    </div>
+  </div>
+  <div class="contact-form-shell">
+    <div class="form-heading"><span>PEDIDO DE CONTACTO</span><span>CS / 01</span></div>
+    <form name="cruza-contactos" method="POST" [formGroup]="form" (ngSubmit)="submit()" [attr.aria-busy]="sending()" novalidate>
+      <input type="hidden" name="form-name" value="cruza-contactos">
+      <div class="form-two">
+        <label>Nome <span aria-hidden="true">*</span>
+          <input name="name" type="text" formControlName="name" autocomplete="name" maxlength="120" placeholder="Como se chama?" [attr.aria-invalid]="submitted() && form.controls.name.invalid" required>
+        </label>
+        <label>Email <span aria-hidden="true">*</span>
+          <input name="email" type="email" formControlName="email" autocomplete="email" maxlength="180" placeholder="nome@exemplo.pt" [attr.aria-invalid]="submitted() && form.controls.email.invalid" required>
+        </label>
+      </div>
+      <div class="form-two">
+        <label>Telefone <small>(opcional)</small>
+          <input name="phone" type="tel" formControlName="phone" autocomplete="tel" maxlength="35" placeholder="O seu contacto">
+        </label>
+        <label>O seu perfil <span aria-hidden="true">*</span>
+          <select name="profile" formControlName="profile" required>
+            <option value="Empresa">Empresa</option>
+            <option value="Trabalhador independente">Trabalhador independente</option>
+            <option value="Particular">Particular</option>
+          </select>
+        </label>
+      </div>
+      <label>Serviço de interesse <span aria-hidden="true">*</span>
+        <select name="service" formControlName="service" required>
+          @for (service of subjects; track service) { <option [value]="service">{{ service }}</option> }
+        </select>
+      </label>
+      <label>Como podemos ajudar? <span aria-hidden="true">*</span>
+        <textarea name="message" formControlName="message" rows="3" maxlength="3000" placeholder="Fale-nos brevemente sobre o que procura..." [attr.aria-invalid]="submitted() && form.controls.message.invalid" required></textarea>
+      </label>
+      <label class="check-consent"><input name="consent" type="checkbox" formControlName="consent" required><span>Autorizo que os dados que envio sejam utilizados para responder ao meu pedido de contacto. <a class="privacy-consent-link" href="#privacidade">Informação de privacidade</a> <strong>*</strong></span></label>
+      <div class="bot-field" aria-hidden="true"><label>Não preencher<input name="bot-field" formControlName="bot-field" tabindex="-1" autocomplete="off"></label></div>
+      <div class="form-footer">
+        <button class="button button-accent" type="submit" [disabled]="sending()"><span>{{ sending() ? 'A enviar…' : 'Enviar pedido' }}</span><span aria-hidden="true">↗</span></button>
+        <span class="form-footnote">* Campos obrigatórios</span>
+      </div>
+      @if(status()) { <p class="form-message" [class.is-success]="success()" role="status" aria-live="polite">{{ status() }}</p> }
+    </form>
+  </div>
+</div>

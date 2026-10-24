@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0d2a56"/><stop offset="1" stop-color="#123d70"/></linearGradient></defs>
+<rect width="1200" height="630" fill="url(#bg)"/>
+<g fill="none" stroke="#dce5c3" opacity=".14"><circle cx="1040" cy="170" r="310"/><circle cx="1040" cy="170" r="380"/><circle cx="1040" cy="170" r="450"/></g>
+<g transform="translate(75 72)"><rect width="24" height="24" rx="2" fill="#fff"/><rect x="31" width="24" height="24" rx="6" fill="#93ad56"/><rect y="31" width="24" height="24" rx="6" fill="#b9c78e"/><rect x="31" y="31" width="24" height="24" rx="2" fill="#fff"/></g>
+<text x="154" y="115" fill="#fff" font-family="DejaVu Sans,sans-serif" font-size="32" font-weight="bold">cruza</text><text x="248" y="115" fill="#bed08a" font-family="DejaVu Sans,sans-serif" font-size="32">sabedorias</text>
+<text x="75" y="314" fill="#fff" font-family="DejaVu Sans,sans-serif" font-size="77" font-weight="bold">Os números contam.</text>
+<text x="75" y="414" fill="#c2d58c" font-family="DejaVu Serif,serif" font-size="71" font-style="italic">Nós damos-lhes direção.</text>
+<path d="M75 488H1125" stroke="#dae2df" stroke-opacity=".35"/>
+<text x="77" y="540" fill="#d6e1dc" font-family="DejaVu Sans,sans-serif" font-size="20" letter-spacing="2">CONTABILIDADE  /  FISCALIDADE  /  CONSULTORIA</text>
+</svg>
